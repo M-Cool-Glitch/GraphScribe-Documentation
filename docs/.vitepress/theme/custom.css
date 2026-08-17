@@ -1,0 +1,161 @@
+/* ----------------------------------------------------------------------------
+   Dark theme, darker than the default
+---------------------------------------------------------------------------- */
+
+.dark {
+  --vp-c-bg: #131316;
+  --vp-c-bg-alt: #0e0e10;
+  --vp-c-bg-elv: #17171a;
+  --vp-c-bg-soft: #17171a;
+
+  --vp-c-border: #33333a;
+  --vp-c-divider: #26262b;
+  --vp-c-gutter: #000000;
+}
+
+/* Home hero: smaller subtitle text, wider hero content */
+.VPHero .main .text {
+  font-size: 40px;
+  line-height: 48px;
+  max-width: 720px;
+}
+
+.VPHero .main .tagline {
+  max-width: 720px;
+}
+
+@media (min-width: 960px) {
+  .VPHero .main .text {
+    font-size: 44px;
+    line-height: 52px;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   Image viewer dialog (click any doc image)
+---------------------------------------------------------------------------- */
+
+.gs-image-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.gs-image-dialog__frame {
+  display: flex;
+  flex-direction: column;
+  max-width: min(90vw, 1280px);
+  max-height: 90vh;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+}
+
+.gs-image-dialog__titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--vp-c-divider);
+  user-select: none;
+}
+
+.gs-image-dialog__title {
+  overflow: hidden;
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gs-image-dialog__close {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  color: var(--vp-c-text-1);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.gs-image-dialog__close:hover {
+  background: var(--vp-c-bg-soft);
+}
+
+.gs-image-dialog__viewport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  overflow: hidden;
+  padding: 12px;
+}
+
+.gs-image-dialog__viewport img {
+  max-width: 100%;
+  max-height: calc(88vh - 96px);
+  transform-origin: center center;
+  transition: transform 0.1s ease-out;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.gs-image-dialog__viewport img.is-dragging {
+  transition: none;
+}
+
+.gs-image-dialog__hint {
+  padding: 6px 12px;
+  border-top: 1px solid var(--vp-c-divider);
+  font-size: 11px;
+  color: var(--vp-c-text-3);
+  user-select: none;
+}
+
+/* ----------------------------------------------------------------------------
+   Doc images: hover cue showing they open in the viewer
+---------------------------------------------------------------------------- */
+
+.gs-image-wrap {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.gs-image-wrap img {
+  cursor: zoom-in;
+  transition: filter 0.15s ease;
+}
+
+.gs-image-wrap::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: var(--vp-c-bg)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E")
+    center / 16px 16px no-repeat;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.gs-image-wrap:hover::after {
+  opacity: 1;
+}
+
+.gs-image-wrap:hover img {
+  filter: brightness(0.8);
+}
+

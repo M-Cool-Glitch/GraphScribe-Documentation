@@ -1,0 +1,14 @@
+{
+  "name": "graphscribe-docs",
+  "version": "1.0.0",
+  "description": "Documentation for the GraphScribe Unreal Engine 5 plugin",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^2.0.0-alpha.19"
+  }
+}
