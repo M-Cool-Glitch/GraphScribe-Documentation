@@ -2,9 +2,9 @@ Source for the GraphScribe documentation site.
 
 **Version 1.0.0**: editor plugin for Unreal Engine **5.7/5.8** that exports **Blueprints**, **Widget Blueprints**, and **DataAssets** into Markdown, Mermaid, JSON, or Graphify extraction JSON so graphs and config references are readable outside the editor. DataTables are never exported.
 
-📽 [Showcase Video](https://youtu.be/) <br/>
-🌐 [Documentation](https://mhmdalmoussawi.github.io/GraphScribe-Docs/) <br/>
-🛰 [Discord](https://discord.coolglitch.net) <br/>
+📽 [Showcase Video](https://www.youtube.com/) <br/>
+🌐 [Documentation](https://m-cool-glitch.github.io/GraphScribe-Documentation/) <br/>
+🛰 [Discord](https://discord.com/invite/pFJcSHdUtQ) <br/>
 
 ## Pages
 
