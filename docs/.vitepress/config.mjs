@@ -3,10 +3,10 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'GraphScribe',
   description: 'Turn Unreal Engine Blueprints into readable docs and AI-ready graphs',
-  base: '/GraphScribe-Docs/',
+  base: '/GraphScribe-Documentation/',
   appearance: 'force-dark',
   head: [
-    ['link', { rel: 'icon', href: '/GraphScribe-Docs/EditorIcon.svg', type: 'image/svg+xml' }]
+    ['link', { rel: 'icon', href: '/GraphScribe-Documentation/EditorIcon.svg', type: 'image/svg+xml' }]
   ],
   themeConfig: {
     logo: '/EditorIcon.svg',
