@@ -11,7 +11,7 @@ hero:
       link: /guide/what-is-graphscribe
     - theme: alt
       text: View on Fab
-      link: https://www.fab.com
+      link: https://www.fab.com/listings/18061e2d-fb42-4560-b470-83a3560f85f1
 
 features:
   - title: One-Click Export

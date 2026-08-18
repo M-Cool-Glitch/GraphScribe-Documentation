@@ -9,7 +9,7 @@ GraphScribe is an **editor plugin** that works inside the Unreal Editor, not on 
 
 ## Install the plugin
 
-1. Download GraphScribe from the [Fab marketplace](https://www.fab.com).
+1. Download GraphScribe from the [Fab marketplace](https://www.fab.com/listings/18061e2d-fb42-4560-b470-83a3560f85f1).
 2. In the editor, open **Edit → Plugins**.
 3. Search for **GraphScribe**.
 4. Make sure the checkbox next to it is **enabled**.
